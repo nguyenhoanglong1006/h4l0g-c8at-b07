@@ -1,0 +1,45 @@
+name: daily-sync
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # 02:00 UTC every day
+  workflow_dispatch:
+
+concurrency:
+  group: daily-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t optibot-sync .
+
+      - name: Scrape and upload delta
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          VECTOR_STORE_ID: ${{ secrets.VECTOR_STORE_ID }}
+        run: |
+          mkdir -p output articles
+          # The container runs as a non-root user with a different UID than the runner.
+          chmod -R a+rwX output articles
+          docker run --rm \
+            -e OPENAI_API_KEY -e VECTOR_STORE_ID \
+            -v "$PWD/output:/app/output" \
+            -v "$PWD/articles:/app/articles" \
+            optibot-sync main.py
+
+      - name: Upload last-run artefact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: last-run
+          path: |
+            output/last_run.json
+            articles/
+          if-no-files-found: ignore
+          retention-days: 30

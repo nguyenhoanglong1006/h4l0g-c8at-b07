@@ -1,0 +1,6 @@
+beautifulsoup4==4.15.0
+markdownify==1.2.3
+openai==3.31.0
+python-dotenv==1.2.4
+requests==2.34.2
+tiktoken==0.14.0

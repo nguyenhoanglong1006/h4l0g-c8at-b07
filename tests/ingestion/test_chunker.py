@@ -1,4 +1,4 @@
-from chunker import PIECE_BUDGET_TOKENS, count_tokens, split_into_pieces
+from optibot.ingestion.chunker import PIECE_BUDGET_TOKENS, count_tokens, split_into_pieces
 
 HEADER = "# Title\n\nArticle URL: https://support.optisigns.com/hc/en-us/articles/1-title\n\n"
 
@@ -12,7 +12,8 @@ def test_short_article_is_a_single_piece_with_header():
 
 
 def test_long_article_splits_at_sections_and_every_piece_carries_the_url():
-    section = "word " * 400
+    # Each section fits alone, but any two together exceed the budget.
+    section = "word " * (PIECE_BUDGET_TOKENS * 2 // 3)
     markdown = HEADER + f"## A\n\n{section}\n\n## B\n\n{section}\n\n## C\n\n{section}\n"
 
     pieces = split_into_pieces(markdown, HEADER)

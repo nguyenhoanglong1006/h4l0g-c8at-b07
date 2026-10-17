@@ -3,7 +3,7 @@ import re
 from bs4 import BeautifulSoup, Tag
 from markdownify import markdownify
 
-from scraper import Article
+from optibot.ingestion.scraper import Article
 
 _DROP_TAGS = ("script", "style", "noscript", "button", "form", "input", "svg")
 _YOUTUBE_EMBED = re.compile(r"youtube(?:-nocookie)?\.com/embed/([\w-]+)")

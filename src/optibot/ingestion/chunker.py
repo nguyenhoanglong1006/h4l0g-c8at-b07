@@ -1,7 +1,7 @@
-"""Split an article into self-contained pieces, each small enough to be exactly one vector-store chunk.
+"""Split an article into self-contained pieces, each small enough to be exactly one File Search chunk.
 
 Every piece starts with the article title and its `Article URL:` line, so whichever chunk
-file_search retrieves, the model can cite the correct URL.
+File Search retrieves, the model can cite the correct URL.
 """
 
 import re
@@ -9,10 +9,10 @@ from dataclasses import dataclass
 
 import tiktoken
 
-# Vector store chunk size is 800 tokens; the budget leaves headroom for tokenizer differences,
-# so each uploaded piece is guaranteed to be embedded as a single chunk.
-CHUNK_SIZE_TOKENS = 800
-PIECE_BUDGET_TOKENS = 650
+# Gemini File Search caps chunks at 512 tokens. Pieces are measured with o200k, not Gemini's tokenizer,
+# so the budget keeps ~20% headroom and each uploaded piece is still embedded as a single chunk.
+CHUNK_SIZE_TOKENS = 512
+PIECE_BUDGET_TOKENS = 400
 
 _HEADING = re.compile(r"^(#{1,6})\s+(.*)$")
 _FENCE = "```"

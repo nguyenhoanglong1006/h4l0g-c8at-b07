@@ -1,5 +1,5 @@
-from converter import article_slug, article_to_markdown, html_to_markdown
-from scraper import Article
+from optibot.ingestion.converter import article_slug, article_to_markdown, html_to_markdown
+from optibot.ingestion.scraper import Article
 
 
 def test_keeps_headings_lists_and_code_blocks():

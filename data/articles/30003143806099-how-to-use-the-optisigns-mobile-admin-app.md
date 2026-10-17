@@ -26,7 +26,7 @@ Article URL: https://support.optisigns.com/hc/en-us/articles/30003143806099-How-
 
 To use the Mobile Admin App, first you'll need to acquire it.
 
-You can find the **OptiSigns Admin**app on the **[Google Play](https://play.google.com/store/apps/details?id=com.optisigns.controller&hl=en_US)**store or [**Apple App Store**](https://apps.apple.com/us/app/optisigns-admin/id1574826252). Download and install it on your mobile device of choice, then proceed with the rest of this guide. You can also download it by scanning the QR code on the WiFi screen of your device.
+You can find the **OptiSigns Admin**app on the [**Google Play**](https://play.google.com/store/apps/details?id=com.optisigns.controller&hl=en_US)store or [**Apple App Store**](https://apps.apple.com/us/app/optisigns-admin/id1574826252). Download and install it on your mobile device of choice, then proceed with the rest of this guide. You can also download it by scanning the QR code on the WiFi screen of your device.
 
 ---
 
@@ -77,7 +77,7 @@ Once connected to the internet, your OptiSigns Android Player is ready for pairi
 
 [View embedded content](https://www.canva.com/design/DAGHSnjaLvI/0llRVsQa_nhUJlkGmBdKtQ/view?embed)
 
-For detailed instructions on each setting up and adding a screen, please visit **[this article.](https://support.optisigns.com/hc/en-us/articles/360016374813)**
+For detailed instructions on each setting up and adding a screen, please visit [**this article.**](https://support.optisigns.com/hc/en-us/articles/360016374813)
 
 > **Note:**
 >
@@ -126,14 +126,12 @@ You can access the Media Section by tapping the **icon directly to the left of t
 - **List/Box Square icon -** change asset view preferences to display as a list or small icons.
 - Tap directly on an asset to view its detailed information, such as type, tags, app type, created date, and last updated time.
 - **3 Dots icon -** This will allow you to manage assets.
-
   - Move
   - Rename
   - Add to a playlist
   - Delete asset
 - **Select option -** select and manage multiple assets at once.
 - **Green Plus Icon** to add new assets.
-
   - **Folder -** Create a new folder.
   - **Camera -** Take and upload images instantly.
   - **Upload -** Add files, images, and videos to your account.
@@ -173,10 +171,6 @@ Navigate to the **Screens**tab → **Edit**the desired screen → choose "**Type
 
 [View embedded content](https://www.canva.com/design/DAGKWMMyO0U/GjZxtK7ux5jbDDXqgkef7Q/view?embed)
 
-#### Limitation
-
-The Media section on the mobile app does not support the "Push to screen" feature or other options available in the File/Asset section on the web version.
-
 ---
 
 <a id="Playlist"></a>
@@ -192,7 +186,6 @@ Please tap the **3 Dot icon**, located to the right of the home button.
 - Use the **search bar** and **sort** feature to filter through your Playlists.
 - **Select option**: select and manage multiple Playlists at once.
 - **Green Plus Icon** to add new assets or create a Nested Playlist
-
   - **Asset**: add new assets to the Playlist.
   - **Playlist**: add a new playlist to the Playlist. For more information about Nested Playlists, please follow [this link](https://support.optisigns.com/hc/en-us/articles/360043621953).
 - **Pencil icon:** change the duration of assets within the Playlist.
@@ -201,7 +194,6 @@ Please tap the **3 Dot icon**, located to the right of the home button.
 - **Hold and move assets:** to arrange the order in the Playlist.
 - **Playlist color:** change the playlist color for better organization.
 - **3 Dots icon**: This will allow you to manage the Playlist.
-
   - **Options:** for more Advanced settings. To understand the function of each setting option in the Playlist Settings, please follow [this article.](https://support.optisigns.com/hc/en-us/articles/28295074995859)
   - **Move**
   - **Duplicate**
@@ -213,10 +205,6 @@ Please tap the **3 Dot icon**, located to the right of the home button.
 
 Navigate to the **Screen** **Section** → **Edit** the desired screen → choose **Type**, and assign your desired Playlist.
 
-#### Limitation
-
-Like the Media section, the "Push to screen" feature is not available.
-
 ---
 
 <a id="Schedule"></a>
@@ -225,13 +213,9 @@ Like the Media section, the "Push to screen" feature is not available.
 
 In this section, you can view and adjust any available Schedule on your account.
 
-- For more detailed instructions on how to create a schedule, please reference **[this article](https://support.optisigns.com/hc/en-us/articles/360016981853).**
+- For more detailed instructions on how to create a schedule, please reference [**this article**](https://support.optisigns.com/hc/en-us/articles/360016981853)**.**
 
 ![Mobile Admin App .jpg](https://support.optisigns.com/hc/article_attachments/31916535101331)
-
-#### Limitation
-
-The "Push to screen" feature is not available.
 
 ---
 

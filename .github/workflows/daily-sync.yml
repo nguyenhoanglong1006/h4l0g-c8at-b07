@@ -21,16 +21,16 @@ jobs:
 
       - name: Scrape and upload delta
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          VECTOR_STORE_ID: ${{ secrets.VECTOR_STORE_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FILE_SEARCH_STORE: ${{ secrets.FILE_SEARCH_STORE }}
         run: |
-          mkdir -p output articles
+          mkdir -p output data/articles
           # The container runs as a non-root user with a different UID than the runner.
-          chmod -R a+rwX output articles
+          chmod -R a+rwX output data/articles
           docker run --rm \
-            -e OPENAI_API_KEY -e VECTOR_STORE_ID \
+            -e GEMINI_API_KEY -e FILE_SEARCH_STORE \
             -v "$PWD/output:/app/output" \
-            -v "$PWD/articles:/app/articles" \
+            -v "$PWD/data/articles:/app/data/articles" \
             optibot-sync main.py
 
       - name: Upload last-run artefact
@@ -40,6 +40,6 @@ jobs:
           name: last-run
           path: |
             output/last_run.json
-            articles/
+            data/articles/
           if-no-files-found: ignore
           retention-days: 30

@@ -1,7 +1,7 @@
 .git
 .venv
 .env
-articles
+data/articles
 output
 tests
 **/__pycache__

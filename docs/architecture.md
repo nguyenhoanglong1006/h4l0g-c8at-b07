@@ -5,7 +5,7 @@ src/optibot/
   config.py            settings (.env) and constants
   ingestion/           Zendesk API client -> HTML to Markdown -> token-bounded pieces
   vectorstore/         delta planning + Gemini File Search upload
-  assistant/           system prompt + file_search query (python -m optibot.assistant)
+  assistant/           system prompt + file_search query, 503 fallback model (python -m optibot.assistant)
   jobs/daily_sync.py   scrape -> convert -> sync -> report (exit 0/1)
 main.py                Docker entry point
 data/articles/         generated Markdown (one file per article)

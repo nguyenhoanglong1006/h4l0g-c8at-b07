@@ -1,7 +1,7 @@
 [project]
 name = "optibot"
 version = "0.1.0"
-description = "Help-center scraper and OpenAI vector-store sync for a support assistant"
+description = "Help-center scraper and Gemini File Search sync for a support assistant"
 requires-python = ">=3.13"
 dynamic = ["dependencies"]
 

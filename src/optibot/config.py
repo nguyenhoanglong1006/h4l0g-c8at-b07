@@ -22,4 +22,4 @@ def load_settings() -> Settings:
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("API_KEY") or ""
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY is not set (see .env.sample).")
-    return Settings(gemini_api_key=api_key, store_name=os.getenv("FILE_SEARCH_STORE", ""))
+    return Settings(gemini_api_key=api_key, store_name=os.getenv("FILE_SEARCH_STORE", "").strip())
